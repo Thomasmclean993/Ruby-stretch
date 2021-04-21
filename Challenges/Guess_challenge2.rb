@@ -1,4 +1,4 @@
-#1/usr/bin/env ruby 
+#!/usr/bin/env ruby 
 
 puts " ---------------------- "
 puts "|    Guessing Game     |"
@@ -6,7 +6,7 @@ puts " ---------------------- "
 
 puts "What is your name? "
 puts ">" 
-name = gets.chomps
+name = gets.chomp
 
 puts "Hello, #{name}!!"
 puts "Let's play a game."
@@ -18,19 +18,21 @@ puts "I have my number."
 
 MAX_GUESSES = 3
 
-1.upto {MAX_GUESSES} do |guess_num|
+1.upto(MAX_GUESSES) do |guess_num|
     print "Guess #{guess_num}"
-    guess = gets.chomps
-    when guess.to_i > number
-        puts "Alittle high, try again!!"
-    when guess.to_i < number 
-        puts "Alittle low, Try something higher!!"
-    else 
-        puts "Ding Ding, That is the correct answer."
-    if guess_num == MAX_GUESSES
-        puts 
-        puts "That was your final attempt. "
-        puts "The correct asnwer was #{number}"
-    break
-    end 
+    puts ""
+    guess = gets.chomp
+        if number == guess.to_i
+            puts "Ding Ding, that is correct!!!"
+            exit
+        elsif guess.to_i < number 
+            puts "Alittle low, Try something higher!!"
+        else guess.to_i > number
+            puts "Alittle high, try again!!"
+        if guess_num == MAX_GUESSES
+            puts "That was your final attempt. "
+            puts "The correct asnwer was #{number}"
+        break
+        end 
+    end        
 end 
