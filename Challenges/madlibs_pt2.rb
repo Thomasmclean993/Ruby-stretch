@@ -18,3 +18,4 @@ end
 text = "The force is a mystical, #{asnwer[0]} power.As Jedi Master Obi-Wan Kenobi once said, 'The force is an energy field, created by all living #{answer[1]}, that suurrounds us, pentrates us , and  binds the #{answer[2]} together.'Using the power of the force, a jedi can do many #{answer[3]} things, like using the Force to exerise #{answer[4]} control over #{answer[5]}-minded #{answer[6]}.
 A Jedi can also use the Force to move objects with his or her #{answer[7]}.
 It doesn't matter how #{answer[8]} these objects are; it only matters how #{answer[9]} the jedi believes in the force."
+#second pull attempted
