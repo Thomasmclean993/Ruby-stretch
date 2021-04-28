@@ -9,7 +9,7 @@ blanks = ['adjective', 'plural Noun', 'noun', 'adjective', 'part of the body', '
 
 vowels = ['a', 'e', 'i', 'o', 'u']
 
-answer = blanks.map do |request|
+answers = blanks.map do |request|
     article = vowels.include?(request[0]) ? 'an' : 'a'
     print "Give me #{article} #{request}: "
     response = gets.chomp
@@ -19,5 +19,3 @@ text = "The force is a mystical, #{answer[0]} power.As Jedi Master Obi-Wan Kenob
 A Jedi can also use the Force to move objects with his or her #{answer[7]}.
 It doesn't matter how #{answer[8]} these objects are; it only matters how #{answer[9]} the jedi believes in the force."
 #second pull attempted
-
-puts text
