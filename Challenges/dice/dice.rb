@@ -1,17 +1,21 @@
-class dice
+class Dice
 
-    attr_accessor:value 
-
-    def initialize
-        toss
+    attr_accessor :roll_both_dice, :roll_one_die
+    
+    die = rand(6)
+    def initialize=(options={})
+        @roll = options[:roll] || '0'
     end
+ 
+    private 
+        def roll_both_dice=
+            die +2 *2
+        end
+    
+        def roll_one_die
+            die + 2
+        end 
+end
 
-    def roll
-        @value = get_a_random_number
-    end
 
-private 
-    def get_a_random_number
-        rand(6) +1 
-    end
-end 
+    
