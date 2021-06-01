@@ -1,31 +1,15 @@
 class Animal
-    attr_reader :hungry
+    attr_reader :hunger, :bored, :tired, :need_affection 
     def initialize
-        hungry
-        bored
-        tired
-        need_affection
+        @hunger = random * 10 
+        @bored = random * 10 
+        @tired = random * 10
+        @need_affection = random * 10 
     end
-public
-    def hungry(random)  # undefined method continues to populate due to my methods. arguement needed?
-        random.each { |hunger| puts hunger * 10}
-    end
-
-    def bored
-        random.each { |fun| puts fun * 10}
-    end
-
-    def tired
-        random.each { |sleep| puts sleep * 10}
-    end 
-
-    def need_affection
-        random.each { |hugs| puts hugs * 10}
-    end
+    
 private
-
     def random
-        rand(10) + 1
+        rand(7) + 1
     end
 end
         
