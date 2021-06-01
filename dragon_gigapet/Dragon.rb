@@ -1,11 +1,5 @@
 class Dragon < Animal  # Do I still need to add instant variables to initalize if already in animal file 
-    attr_reader 
-    def initialize
-        @hunger = random * 10 
-        @bored = random * 10 
-        @tired = random * 10
-        @need_affection = random * 10
-    end
+    
 
 
 public
