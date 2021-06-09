@@ -1,12 +1,10 @@
 class Animal
     attr_reader :hunger, :bored, :tired, :need_affection 
     def initialize
-       
         @hunger = random * 10 
         @bored = random * 10 
         @tired = random * 10
         @need_affection = random * 10 
-        super
     end
     
 private

@@ -1,39 +1,49 @@
 class Dragon < Animal  # Do I still need to add instant variables to initalize if already in animal file 
-    
 
+   
 
-public
-
-    def mood_check #Jonah mentioned that I shouldn't have puts statements in my class files. Only in 1st level files AKA Gigapet.rb
+    def mood_check 
         if @hunger >= 60
-            puts "The dragon seems to try to bite at your leg. They must be hungry?"
+            "The dragon seems to try to bite at your leg. They must be hungry?"
         elsif @bored >= 60
-            puts "The dragon tries to jump on you? They must want to play. "
+            "The dragon tries to jump on you? They must want to play. "
         elsif @tired >= 60 
-            puts "The dragon attempts to sleep on the ground even though they just hatched. They must be bored?"
+            "The dragon attempts to sleep on the ground even though they just hatched. They must be tired?"
         elsif @need_affection >= 60 
-            puts "The Dragon is rubbing you leg, seems to want somekind of affection?"
+            "The Dragon is rubbing you leg, seems to want somekind of affection?"
         else
-            puts "Looks like the dragon is ready to leave!!"
-        end # is there a better loop to use instead of if, else statement. Maybe case statement 
+            "Looks like the dragon is ready to leave!!"
+        end
     end 
 
-
-
-# When you are able to figure out a way to reference toward the instance variables created in Animal.rb, you will need to change these methods 
     def feed
-        @hunger - 100
+        @hunger -= 100
     end
 
     def play
-        @bored - 100
+        @bored -= 100
     end
 
     def rest
-        @tired - 100
+        @tired -= 100
     end
 
     def hug 
-        @need_affection - 100 
+        @need_affection -= 100 
     end 
 end
+
+=begin
+shell_color = ["blue", "red", "green", "yellow", "black"]
+   
+def accepted_input(color)
+color.each do |input| 
+    if color == shell_color
+        color.chomp.downcase 
+    else  
+        "Is that a color?? It's orange."
+        color = "orange"
+    end
+end
+
+=end 
